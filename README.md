@@ -4,7 +4,7 @@ Ce dépôt contient les solutions utilisés pour résoudre les épreuves des Cha
 
 ## 📂 Organisation du dépôt
 
-- **cryptohack_challenges** : Solutions pour les épreuves du FCSC Hackropole 2020.
+- **cryptohack_challenges** : Solutions pour les différentes épreuves.
 
 ## 🚀 Comment utiliser ce dépôt
 

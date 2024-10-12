@@ -10,5 +10,5 @@ Ce dépôt contient les solutions utilisés pour résoudre les épreuves des Cha
 
 **Clonage du dépôt** :
    ```bash
-   git clone https://github.com/Th1sma/Hackropole_solutions.git
-   cd Hackropole_solutions/
+   git clone 
+   cd Cryptohack_solutions/

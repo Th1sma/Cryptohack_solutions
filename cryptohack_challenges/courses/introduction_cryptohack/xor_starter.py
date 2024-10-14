@@ -1,4 +1,4 @@
-from Crypto.Util.number import bytes_to_long
+from Crypto.Util.number import *
 
 string = "label"
 integer = 13

@@ -1,4 +1,4 @@
-from pwn import *  # pip install pwntools
+from pwn import * 
 import json
 import base64
 import codecs

@@ -1,59 +1,61 @@
-from pwn import * 
+from pwn import *  # pip install pwntools
 import json
 import base64
 import codecs
 from Crypto.Util.number import bytes_to_long, long_to_bytes
-import sys
 
-r = remote("socket.cryptohack.org", 13377, level="debug")
+# Connexion au serveur
+r = remote('socket.cryptohack.org', 13377, level='debug')
 
-
+# Fonction pour recevoir des données JSON
 def json_recv():
     line = r.recvline()
     return json.loads(line.decode())
 
-
+# Fonction pour envoyer des données JSON
 def json_send(hsh):
     request = json.dumps(hsh).encode()
     r.sendline(request)
 
-
-def decode(enc_type, encoded_data):
-    if enc_type == "base64":
-        return base64.b64decode(encoded_data).decode()
-    elif enc_type == "hex":
-        return bytes.fromhex(encoded_data).decode()
-    elif enc_type == "rot13":
-        return codecs.decode(encoded_data, "rot_13")
-    elif enc_type == "bigint":
-        return long_to_bytes(int(encoded_data, 16)).decode()
-    elif enc_type == "utf-8":
-        return "".join([chr(c) for c in encoded_data])
+# Fonction pour décoder les données reçues
+def decoding_data_received(received):
+    if received["type"] == "base64":
+        decoded = base64.b64decode(received["encoded"]).decode()
+    elif received["type"] == "hex":
+        decoded = bytes.fromhex(received["encoded"]).decode()
+    elif received["type"] == "rot13":
+        decoded = codecs.decode(received["encoded"], 'rot_13')
+    elif received["type"] == "bigint":
+        decoded = long_to_bytes(int(received["encoded"], 16)).decode()
+    elif received["type"] == "utf-8":
+        decoded = ''.join([chr(c) for c in received["encoded"]])
     else:
-        print(f"[!] Unknown encoding type: {enc_type}")
-        return None
+        print("Type not detected")
+    return decoded
 
-
-while True:
-
+# Boucle principale
+a = 0
+while a < 100:
+    # Recevoir les données du serveur
     received = json_recv()
-
-    if "flag" in received:
-        print("FLAG: %s" % received["flag"])
-        sys.exit(0)
-
-    decoded_value = decode(received["type"], received["encoded"])
-
-    if decoded_value is None:
-        print("[!] Failed to decode the data, exiting.")
-        sys.exit(1)
 
     print("===== Received informations =====")
     print("Received type: ", received["type"])
     print("Received encoded value: ", received["encoded"])
-    print("Decoded value: ", decoded_value)
     print("=================================")
 
-    to_send = {"decoded": decoded_value}
+    # Ce que j'envoie comme requête au serveur
+    to_send = {
+        "decoded": "test"
+    }
 
+    # Envoyer la réponse au serveur
     json_send(to_send)
+    
+    # Réponse après envoie
+    if "error" in response:
+        print("Decoding failed")
+        a += 1
+    elif "flag" in response:
+        print("Flag found: ", response["flag"])
+        break

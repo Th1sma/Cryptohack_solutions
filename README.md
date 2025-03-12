@@ -16,7 +16,7 @@ Ce dépôt contient certaines solutions utilisés pour résoudre les épreuves d
    cd Cryptohack_solutions/
 ```
 
-## Ressources : 
+## 📌 Ressources : 
 ### Lancer le conteneur CryptoHack
 Télécharger et exécuter le conteneur :
 ```bash

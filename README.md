@@ -17,11 +17,11 @@ Ce dépôt contient certaines solutions utilisés pour résoudre les épreuves d
 ```
 
 ## 📌 Ressources : 
-### Lancer le conteneur CryptoHack
-Télécharger et exécuter le conteneur :
+**Télécharger et exécuter le conteneur :**
 ```bash
 docker run -p xxx.xxx.xxx.xxx:8888:8888 -it hyperreality/cryptohack:latest
 ```
-Lancement du serveur Jupiter notebook que l'on peut accéder via :
-
+**Lancement du serveur Jupiter notebook que l'on peut accéder via :**
+```
 http://xxx.xxx.xxx.xxx:8888
+```

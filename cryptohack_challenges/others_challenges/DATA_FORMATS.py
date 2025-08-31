@@ -39,4 +39,4 @@ try:
     print("Private exponent:", key.d)
 
 except ValueError as e:
-    print("Erreur lors du chargement de la clé :", e)
+    print("Erreur :", e)

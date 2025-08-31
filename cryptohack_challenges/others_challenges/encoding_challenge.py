@@ -5,17 +5,20 @@ import codecs
 from Crypto.Util.number import bytes_to_long, long_to_bytes
 
 # Connexion au serveur
-r = remote('socket.cryptohack.org', 13377, level='debug')
+r = remote("socket.cryptohack.org", 13377, level="debug")
+
 
 # Fonction pour recevoir des données JSON
 def json_recv():
     line = r.recvline()
     return json.loads(line.decode())
 
+
 # Fonction pour envoyer des données JSON
 def json_send(hsh):
     request = json.dumps(hsh).encode()
     r.sendline(request)
+
 
 # Fonction pour décoder les données reçues
 def decoding_data_received(received):
@@ -24,14 +27,15 @@ def decoding_data_received(received):
     elif received["type"] == "hex":
         decoded = bytes.fromhex(received["encoded"]).decode()
     elif received["type"] == "rot13":
-        decoded = codecs.decode(received["encoded"], 'rot_13')
+        decoded = codecs.decode(received["encoded"], "rot_13")
     elif received["type"] == "bigint":
         decoded = long_to_bytes(int(received["encoded"], 16)).decode()
     elif received["type"] == "utf-8":
-        decoded = ''.join([chr(c) for c in received["encoded"]])
+        decoded = "".join([chr(c) for c in received["encoded"]])
     else:
         print("Type not detected")
     return decoded
+
 
 # Boucle principale
 a = 0
@@ -45,13 +49,11 @@ while a < 100:
     print("=================================")
 
     # Ce que j'envoie comme requête au serveur
-    to_send = {
-        "decoded": "test"
-    }
+    to_send = {"decoded": "test"}
 
     # Envoyer la réponse au serveur
     json_send(to_send)
-    
+
     # Réponse après envoie
     if "error" in response:
         print("Decoding failed")

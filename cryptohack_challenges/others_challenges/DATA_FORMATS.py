@@ -38,5 +38,5 @@ try:
     key = RSA.import_key(der_key)
     print("Private exponent:", key.d)
 
-except ValueError as e:
+except Exception as e:
     print("Erreur :", e)

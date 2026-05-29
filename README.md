@@ -1,12 +1,12 @@
-# Solutions aux challenges CryptoHack 💻
+# Solutions plateforme CryptoHack 💻
 
-Ce dépôt contient une sélection de solutions utilisées pour résoudre différents challenges proposés par CryptoHack (liste non exhaustive).
+Ce dépôt contient une sélection de solutions utilisées pour résoudre différents challenges proposés par la plateforme CryptoHack (liste non exhaustive).
 
 ## 📂 Structure du dépôt
 
 - **cryptohack_challenges** : solutions des différents challenges.
-  - **courses** : ressources et exercices associés aux cours CryptoHack.
-  - **others_challenges** : solutions provenant d'autres plateformes ou challenges complémentaires.
+  - **courses** : exercices associés aux cours.
+  - **others_challenges** : solutions associés aux challenges complémentaires.
 
 ## 🚀 Utilisation du dépôt
 

@@ -5,8 +5,8 @@ Ce dépôt contient une sélection de solutions utilisées pour résoudre diffé
 ## 📂 Structure du dépôt
 
 - **cryptohack_challenges** : solutions des différents challenges.
-  - **courses** : exercices associés aux cours.
-  - **others_challenges** : solutions associées aux challenges complémentaires.
+  - **courses** : exercices/solutions associés aux cours.
+  - **others_challenges** : exercices/solutions associées aux challenges complémentaires.
 
 ## 🚀 Utilisation du dépôt
 

@@ -6,7 +6,7 @@ Ce dépôt contient une sélection de solutions utilisées pour résoudre diffé
 
 - **cryptohack_challenges** : solutions des différents challenges.
   - **courses** : exercices associés aux cours.
-  - **others_challenges** : solutions associés aux challenges complémentaires.
+  - **others_challenges** : solutions associées aux challenges complémentaires.
 
 ## 🚀 Utilisation du dépôt
 
@@ -18,11 +18,11 @@ cd Cryptohack_solutions/
 ```
 
 ## 📌 Ressources : 
-**Télécharger et lancer le conteneur :**
+### Télécharger et lancer le conteneur :
 ```bash
 docker run -p xxx.xxx.xxx.xxx:8888:8888 -it hyperreality/cryptohack:latest
 ```
-**Accéder au serveur Jupyter Notebook :**
+### Accéder au serveur Jupyter Notebook :
 ```
 http://xxx.xxx.xxx.xxx:8888
 ```

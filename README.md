@@ -1,19 +1,20 @@
 # Solutions aux challenges CryptoHack 💻
 
-Ce dépôt contient une sélection de solutions utilisées pour résoudre différents challenges proposés par CryptoHack (non-exhaustif).
+Ce dépôt contient une sélection de solutions utilisées pour résoudre différents challenges proposés par CryptoHack (liste non exhaustive).
 
 ## 📂 Structure du dépôt
 
-- cryptohack_challenges : Solutions des différents défis.
-   - courses
-   - others_challenges
-  
-## Utilisation du dépôt
+- **cryptohack_challenges** : solutions des différents challenges.
+- **courses** : ressources et exercices associés aux cours CryptoHack.
+- **others_challenges** : solutions provenant d'autres plateformes ou challenges complémentaires.
 
-**Cloner le dépôt :**
+## 🚀 Utilisation du dépôt
+
+### Cloner le dépôt
+
 ```bash
-   git clone https://github.com/Th1sma/Cryptohack_solutions.git
-   cd Cryptohack_solutions/
+git clone https://github.com/Th1sma/Cryptohack_solutions.git
+cd Cryptohack_solutions/
 ```
 
 ## 📌 Ressources : 

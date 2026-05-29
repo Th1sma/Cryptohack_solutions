@@ -1,27 +1,21 @@
-### Still in progress...  ⬇️
+# Solutions aux challenges CryptoHack 💻
 
-# Solutions for the CryptoHack Challenges 💻
+Ce dépôt contient une sélection de solutions utilisées pour résoudre différents challenges proposés par CryptoHack (non-exhaustif).
 
-This repository contains selected solutions used to solve various CryptoHack challenges.
+## 📂 Structure du dépôt
 
-## 📂 Repository Structure
+- cryptohack_challenges : Solutions des différents défis.
 
-- **cryptohack_challenges** : Solutions for different challenges.
+## Utilisation du dépôt
 
-## 🚀 How to Use This Repository
-
-**Clone the repository :**
+**Cloner le dépôt :**
 ```bash
    git clone https://github.com/Th1sma/Cryptohack_solutions.git
    cd Cryptohack_solutions/
 ```
 
-## 📌 Resources : 
-**Download and run the container :**
+## 📌 Ressources : 
+** Télécharger et lancer le conteneur :**
 ```bash
 docker run -p xxx.xxx.xxx.xxx:8888:8888 -it hyperreality/cryptohack:latest
-```
-**Start the Jupyter notebook server :**
-```
-http://xxx.xxx.xxx.xxx:8888
 ```

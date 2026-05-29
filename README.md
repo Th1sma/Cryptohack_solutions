@@ -5,7 +5,9 @@ Ce dépôt contient une sélection de solutions utilisées pour résoudre diffé
 ## 📂 Structure du dépôt
 
 - cryptohack_challenges : Solutions des différents défis.
-
+   - courses
+   - others_challenges
+  
 ## Utilisation du dépôt
 
 **Cloner le dépôt :**
